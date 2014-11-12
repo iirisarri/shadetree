@@ -15,6 +15,16 @@ use Bio::SimpleAlign;
 use Bio::AlignIO;
 use Bio::SeqIO;
 
+## PROGRAMMING FOR BIOLOGY 2014 @ CSHL ##
+## shadeTree team!! ##
+
+  # Andrii Gryganskyi
+  # Elisabeth Hehenberger
+  # Iker Irisarri
+  # Ryan Kepler
+  # Patrick McLaughlin
+
+
 #### READ CONFIG FILE ####
 # IN: configuration file
 # OUT: %muscle_configs hash, which contains all the info from the configuration file (not only for muscle!!)

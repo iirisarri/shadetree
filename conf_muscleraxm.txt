@@ -1,0 +1,65 @@
+#ShadeTree config file
+
+##########################################################################################
+###  This section provides parameters for the Muscle alignment. The script uses the 
+###  Bio::Tools::Run::Alignment::Muscle module in bioperl.
+##########################################################################################
+
+#The name of this run
+run_name: fulltest
+
+#the reference alignment should be sequences from the exact specimens used for a 
+#constraint tree, if a constraint tree is used
+
+ref_aln: frog16s.fa
+
+#file containing sequences submitted to blast.  This is a subset of ref_aln.
+query_file: FJ950532.fa
+
+# evalue threshold
+
+evalue: 1e-3
+
+# blast parameters
+# to run blast localy, provide db name and path (comment out remote!!)
+# to run it remotely, provide db name (nt or nr) and turn on "remote = 1"
+# SET UP PROTEIN BLAST
+
+blast_db_name: froggies_16s_all_ncbi
+blast_db_dir: /home/iirisarri/shadeTree/db
+#blast_remote: 1
+# output file from blast
+blast_outfile: shadetree.blastn
+
+## MUSCLE PARAMS
+param_quiet: 0
+param_maxmb: 4000
+param_maxiters: 2
+
+#name of the input file.  Must match exactly
+
+infile: shadetree.fasta
+
+#name of the output file to be written
+
+outfile: shadetree.aln.fasta
+
+#name of the file output by trimal
+
+trimalout: shadetree.aln.cln.fasta
+
+#The name of the working directory raxml will write files to
+
+raxml_dir: shadetree_raxml
+
+#The number of cores to give raxml
+
+raxml_cores: 8
+
+#The number of raxml bootstrap replicates
+
+raxml_boots: 100
+
+#The model for raxml.  For nucleotide use GTRGAMMA, for proteins, better figure that out sucka!
+
+raxml_model: GTRGAMMA
